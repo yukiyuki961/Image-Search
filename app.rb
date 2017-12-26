@@ -5,8 +5,7 @@ require 'open-uri'
 require "sinatra/json"
 
 get '/' do
-    @imagesearch = ImageSearch.all
-    erb :index
+'apiです'
 end
 
 get '/photo/apple' do
