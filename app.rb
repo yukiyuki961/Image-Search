@@ -3,13 +3,14 @@ Bundler.require
 require 'sinatra/reloader' if development?
 require 'open-uri'
 require "sinatra/json"
+require 'json'
 
 get '/' do
 'apiです'
 end
 
 get '/photo/apple' do
-  "https://kotobank.jp/image/dictionary/nipponica/media/813060240025579.jpg"
+{ "apple": "https://kotobank.jp/image/dictionary/nipponica/media/813060240025579.jpg"}.to_json
 end
 
 get '/photo/melon' do
